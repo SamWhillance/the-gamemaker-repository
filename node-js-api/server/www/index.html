@@ -24,10 +24,21 @@
 			<div class="col-sm-12">
 				<h1>Ducks</h1>
 
-				<div ng-repeat="duck in ducks track by $index">
-					<div class="col-sm-4 text-center">
-						<img src="img/duck.png"/>
-						<p>{{ duck.name }}</p>
+				<div class="row">
+					<div class="col-xs-12">
+						<label>Duck name: </label>
+						<input type="text" ng-model="newDuckName"/>
+						<button class="btn btn-primary" ng-click="createDuck()">Create Duck</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<div ng-repeat="duck in ducks track by $index">
+						<div class="col-sm-3 text-center">
+							<img src="img/duck.png"/>
+							<p>{{ duck.name }}</p>
+							<button class="btn btn-danger" ng-click="deleteDuck(duck)">x</button>
+						</div>
 					</div>
 				</div>
 

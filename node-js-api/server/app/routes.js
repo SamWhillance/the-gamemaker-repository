@@ -43,9 +43,8 @@ module.exports = function (app) {
 	});
 
 	// DELETE DUCK
-	app.delete('/api/duck', function (req, res) {
-		console.log(req.body);
-		var duckID = req.body.id;
+	app.delete('/api/duck/:id', function (req, res) {
+		var duckID = req.params.id;
 
 		console.log(duckID);
 
