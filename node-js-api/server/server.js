@@ -10,6 +10,7 @@ var methodOverride = require('method-override');
 // configuration ===============================================================
 mongoose.connect('mongodb://admin:admin@ds015584.mlab.com:15584/test-db');
 
+app.use(express.static(__dirname + '/www'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended': 'true'}));
 app.use(bodyParser.json());

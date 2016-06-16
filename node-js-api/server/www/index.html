@@ -1,0 +1,39 @@
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Ducks</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+
+	<script src="js/duck.controller.js"></script>
+	<script src="js/duck.service.js"></script>
+	<script src="js/app.js"></script>
+
+	<link rel="stylesheet" href="css/app.css">
+
+</head>
+<body ng-controller="duckController" ng-init="init()">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Ducks</h1>
+
+				<div ng-repeat="duck in ducks track by $index">
+					<div class="col-sm-4 text-center">
+						<img src="img/duck.png"/>
+						<p>{{ duck.name }}</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
