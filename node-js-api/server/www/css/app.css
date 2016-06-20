@@ -1,20 +1,4 @@
-html {
-	overflow-y: scroll;
-}
-#todo-list {
-	margin-bottom: 30px;
-}
-#todo-form {
-	margin-bottom: 50px;
-}
-td {
-	font-size: 12px;
-}
-
-.navbar-header a {
-	padding-top: 23px;
-}
-
-ng-map {
-	height: 600px;
+.duck-box {
+	border: 1px solid blue;
+	border-radius: 10px;
 }

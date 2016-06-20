@@ -34,10 +34,23 @@
 
 				<div class="row">
 					<div ng-repeat="duck in ducks track by $index">
-						<div class="col-sm-3 text-center">
-							<img src="img/duck.png"/>
-							<p>{{ duck.name }}</p>
-							<button class="btn btn-danger" ng-click="deleteDuck(duck)">x</button>
+						<div class="col-sm-12 duck-box">
+							<div class="row">
+								<div class="col-sm-4 text-center">
+									<img src="img/duck.png"/>
+								</div>
+								<div class="col-sm-4">
+									<h2 ng-bind="duck.name"></h2>
+									<p ng-bind="duck._id"></p>
+								</div>
+								<div class="col-sm-4">
+									<label>Rename duck: </label>
+									<input type="text" ng-model="duck.newName"/>
+									<button class="btn btn-default btn-sm" ng-click="updateDuck(duck, duck.newName)">Rename</button>
+									<br><br>
+									<button class="btn btn-danger btn-sm" ng-click="deleteDuck(duck)">Delete</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
