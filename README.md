@@ -2,7 +2,7 @@
 
 # Overview
 
-# Patreon
-It would mean a great deal if you supported me on Patreon. Donations from that site enable me to focus more on creating content for other developers.
+# Donations
+If you find this useful and would like to support me, please consider donating through PayPal (samwhillance@gmail.com)
 
 # Contributing
